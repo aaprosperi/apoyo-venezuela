@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apoyo Venezuela - Comunidad de Apoyo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>🇻🇪 Apoyo Venezuela</h1>
+            <p class="tagline">Unidos en la esperanza, juntos en la solidaridad</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="bienvenida" class="section">
+            <h2>Bienvenidos</h2>
+            <p>Este es un espacio seguro para la comunidad venezolana. Aquí puedes compartir mensajes de apoyo, ofrecer ayuda o encontrar la ayuda que necesitas.</p>
+            <p>En tiempos difíciles, la unión hace la fuerza. Juntos somos más fuertes.</p>
+        </section>
+
+        <section id="mensajes-apoyo" class="section">
+            <h2>Muro de Apoyo</h2>
+            <p class="section-description">Comparte un mensaje de esperanza o ánimo para la comunidad</p>
+
+            <div class="form-card">
+                <textarea id="mensaje-texto" placeholder="Escribe tu mensaje de apoyo aquí..." rows="4"></textarea>
+                <input type="text" id="mensaje-nombre" placeholder="Tu nombre (opcional)" />
+                <button onclick="publicarMensaje()" class="btn-primary">Publicar Mensaje</button>
+            </div>
+
+            <div id="lista-mensajes" class="mensajes-container">
+                <!-- Los mensajes aparecerán aquí -->
+            </div>
+        </section>
+
+        <section id="ayuda" class="section">
+            <h2>Ofrecer o Buscar Ayuda</h2>
+
+            <div class="tabs">
+                <button class="tab-btn active" onclick="cambiarTab('ofrecer')">Ofrecer Ayuda</button>
+                <button class="tab-btn" onclick="cambiarTab('buscar')">Buscar Ayuda</button>
+            </div>
+
+            <div id="ofrecer-tab" class="tab-content active">
+                <p class="section-description">¿Puedes ayudar a alguien? Publica lo que puedes ofrecer</p>
+                <div class="form-card">
+                    <select id="ayuda-tipo-ofrecer">
+                        <option value="">Selecciona el tipo de ayuda</option>
+                        <option value="alojamiento">Alojamiento temporal</option>
+                        <option value="trabajo">Oportunidad de trabajo</option>
+                        <option value="alimentos">Alimentos / Donaciones</option>
+                        <option value="transporte">Transporte</option>
+                        <option value="documentos">Ayuda con documentos</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                    <textarea id="ayuda-descripcion-ofrecer" placeholder="Describe qué puedes ofrecer..." rows="3"></textarea>
+                    <input type="text" id="ayuda-ubicacion-ofrecer" placeholder="Ciudad/País" />
+                    <input type="text" id="ayuda-contacto-ofrecer" placeholder="Forma de contacto (email, teléfono, etc.)" />
+                    <button onclick="publicarAyuda('ofrecer')" class="btn-primary">Publicar Oferta</button>
+                </div>
+                <div id="lista-ofertas" class="ayuda-container"></div>
+            </div>
+
+            <div id="buscar-tab" class="tab-content">
+                <p class="section-description">¿Necesitas ayuda? Publica tu solicitud</p>
+                <div class="form-card">
+                    <select id="ayuda-tipo-buscar">
+                        <option value="">Selecciona el tipo de ayuda</option>
+                        <option value="alojamiento">Alojamiento temporal</option>
+                        <option value="trabajo">Busco trabajo</option>
+                        <option value="alimentos">Alimentos / Donaciones</option>
+                        <option value="transporte">Transporte</option>
+                        <option value="documentos">Ayuda con documentos</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                    <textarea id="ayuda-descripcion-buscar" placeholder="Describe qué necesitas..." rows="3"></textarea>
+                    <input type="text" id="ayuda-ubicacion-buscar" placeholder="Ciudad/País" />
+                    <input type="text" id="ayuda-contacto-buscar" placeholder="Forma de contacto (email, teléfono, etc.)" />
+                    <button onclick="publicarAyuda('buscar')" class="btn-primary">Publicar Solicitud</button>
+                </div>
+                <div id="lista-solicitudes" class="ayuda-container"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Apoyo Venezuela - Hecho con ❤️ para la comunidad venezolana</p>
+            <p class="footer-note">Nota: Esta es una plataforma comunitaria. Por favor, ten precaución al compartir información personal.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
