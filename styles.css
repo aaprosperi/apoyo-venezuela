@@ -266,6 +266,540 @@ footer p {
     font-style: italic;
 }
 
+/* Hero Section */
+.hero-section {
+    text-align: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.hero-section h2 {
+    color: white;
+    border-bottom: 3px solid rgba(255, 255, 255, 0.3);
+    font-size: 2.2rem;
+}
+
+.hero-text {
+    font-size: 1.15rem;
+    margin-bottom: 2rem;
+    line-height: 1.8;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.feature-card {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 1.5rem;
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.feature-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.feature-card h3 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.feature-card p {
+    color: #7f8c8d;
+    font-size: 0.95rem;
+}
+
+/* Demo Section */
+.demo-tabs {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.demo-tab-btn {
+    flex: 1;
+    min-width: 150px;
+    padding: 0.8rem 1rem;
+    background: #f8f9fa;
+    border: 2px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: 500;
+}
+
+.demo-tab-btn.active {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-color: #667eea;
+}
+
+.demo-tab-btn:hover:not(.active) {
+    background: #e9ecef;
+}
+
+.demo-content {
+    display: none;
+}
+
+.demo-content.active {
+    display: block;
+}
+
+/* Poll/Encuesta */
+.poll-options {
+    display: grid;
+    gap: 1rem;
+}
+
+.poll-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    background: white;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 1rem;
+    text-align: left;
+}
+
+.poll-btn:hover {
+    border-color: #667eea;
+    transform: translateX(5px);
+}
+
+.poll-votes {
+    color: #667eea;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+/* WhatsApp Demo */
+.whatsapp-demo {
+    text-align: center;
+    padding: 2rem;
+}
+
+.whatsapp-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.whatsapp-demo h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.whatsapp-features {
+    list-style: none;
+    text-align: left;
+    max-width: 500px;
+    margin: 2rem auto;
+}
+
+.whatsapp-features li {
+    padding: 0.8rem;
+    margin-bottom: 0.5rem;
+    background: #f8f9fa;
+    border-radius: 6px;
+    font-size: 1.05rem;
+}
+
+.btn-whatsapp {
+    background: #25d366;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin-top: 1rem;
+}
+
+.btn-whatsapp:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+}
+
+/* CTA Section */
+.cta-section {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+}
+
+.cta-section h2 {
+    color: white;
+    border-bottom: 3px solid rgba(255, 255, 255, 0.3);
+}
+
+.cta-section .section-description {
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.idea-form {
+    background: rgba(255, 255, 255, 0.95);
+}
+
+.idea-form input,
+.idea-form select,
+.idea-form textarea {
+    background: white;
+}
+
+.btn-large {
+    width: 100%;
+    padding: 1.2rem 2rem;
+    font-size: 1.1rem;
+}
+
+.form-note {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #7f8c8d;
+    margin-top: 1rem;
+}
+
+/* Urgencia Selector */
+.urgencia-selector {
+    margin-bottom: 1.5rem;
+}
+
+.urgencia-selector label {
+    display: block;
+    margin-bottom: 0.8rem;
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.urgencia-buttons {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.urgencia-btn {
+    flex: 1;
+    padding: 0.8rem;
+    background: white;
+    border: 2px solid #e0e0e0;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: 500;
+}
+
+.urgencia-btn:hover {
+    border-color: #667eea;
+}
+
+.urgencia-btn.urgencia-selected {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-color: #667eea;
+}
+
+/* Ideas Container */
+.ideas-container {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.idea-card {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 12px;
+    border-left: 4px solid #667eea;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.idea-card:hover {
+    transform: translateX(4px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.idea-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    margin-bottom: 1rem;
+}
+
+.idea-categoria {
+    background: #667eea;
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.idea-urgencia {
+    font-size: 0.85rem;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+.idea-urgencia.alta {
+    background: #e74c3c;
+    color: white;
+}
+
+.idea-urgencia.media {
+    background: #f39c12;
+    color: white;
+}
+
+.idea-urgencia.baja {
+    background: #95a5a6;
+    color: white;
+}
+
+.idea-descripcion {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.idea-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #e0e0e0;
+}
+
+.idea-autor {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+.idea-likes {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.like-btn {
+    background: none;
+    border: 2px solid #667eea;
+    color: #667eea;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.like-btn:hover {
+    background: #667eea;
+    color: white;
+}
+
+.like-btn.liked {
+    background: #667eea;
+    color: white;
+}
+
+/* WhatsApp Notification Simulation */
+.whatsapp-notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25d366;
+    color: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    max-width: 300px;
+    animation: slideIn 0.3s ease-out;
+    z-index: 1000;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(400px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.whatsapp-notification h4 {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.whatsapp-notification p {
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+/* Toast Notifications */
+#toast-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.toast {
+    background: white;
+    color: #2c3e50;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    min-width: 300px;
+    animation: slideInRight 0.3s ease-out;
+    border-left: 4px solid #667eea;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.toast.success {
+    border-left-color: #2ecc71;
+}
+
+.toast.error {
+    border-left-color: #e74c3c;
+}
+
+.toast.info {
+    border-left-color: #3498db;
+}
+
+.toast-icon {
+    font-size: 1.5rem;
+}
+
+.toast-content {
+    flex: 1;
+}
+
+.toast-title {
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.toast-message {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(400px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        transform: translateX(400px);
+    }
+}
+
+/* Loading spinner */
+.btn-primary.loading,
+.btn-whatsapp.loading {
+    position: relative;
+    color: transparent;
+    pointer-events: none;
+}
+
+.btn-primary.loading::after,
+.btn-whatsapp.loading::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    left: 50%;
+    margin-left: -10px;
+    margin-top: -10px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: white;
+    animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Input validation states */
+input.error,
+textarea.error,
+select.error {
+    border-color: #e74c3c;
+    animation: shake 0.3s;
+}
+
+input.success,
+textarea.success,
+select.success {
+    border-color: #2ecc71;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+/* Pulse animation for important elements */
+.pulse {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.7;
+    }
+}
+
+/* Smooth transitions */
+* {
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     header h1 {
@@ -280,12 +814,34 @@ footer p {
         font-size: 1.5rem;
     }
 
-    .tabs {
+    .hero-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .demo-tabs {
         flex-direction: column;
     }
 
-    .ayuda-header {
+    .demo-tab-btn {
+        min-width: auto;
+    }
+
+    .urgencia-buttons {
+        flex-direction: column;
+    }
+
+    .idea-header {
         flex-direction: column;
         gap: 0.5rem;
+    }
+
+    .whatsapp-notification {
+        left: 20px;
+        right: 20px;
+        max-width: none;
     }
 }

@@ -3,95 +3,179 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apoyo Venezuela - Comunidad de Apoyo</title>
+    <title>VZLA.dev - Plataforma Web para Venezuela</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <div class="container">
-            <h1>🇻🇪 Apoyo Venezuela</h1>
-            <p class="tagline">Unidos en la esperanza, juntos en la solidaridad</p>
+            <h1>🇻🇪 VZLA.dev</h1>
+            <p class="tagline">Plataforma Web Comunitaria para Venezuela</p>
         </div>
     </header>
 
     <main class="container">
-        <section id="bienvenida" class="section">
-            <h2>Bienvenidos</h2>
-            <p>Este es un espacio seguro para la comunidad venezolana. Aquí puedes compartir mensajes de apoyo, ofrecer ayuda o encontrar la ayuda que necesitas.</p>
-            <p>En tiempos difíciles, la unión hace la fuerza. Juntos somos más fuertes.</p>
+        <!-- Hero Section -->
+        <section id="hero" class="section hero-section">
+            <h2>Esta es tu plataforma</h2>
+            <p class="hero-text">VZLA.dev es una plataforma web lista para servir a la comunidad venezolana. Podemos desarrollar <strong>cualquier funcionalidad</strong> que necesites:</p>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3>Integración WhatsApp</h3>
+                    <p>Notificaciones, grupos automáticos, bots de respuesta</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💬</div>
+                    <h3>Comunidad</h3>
+                    <p>Foros, mensajería, perfiles, conexiones</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Información</h3>
+                    <p>Noticias verificadas, recursos, directorios</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🛠️</div>
+                    <h3>Herramientas</h3>
+                    <p>Calculadoras, mapas, seguimiento, formularios</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🤝</div>
+                    <h3>Ayuda Mutua</h3>
+                    <p>Conectar quien ofrece con quien necesita</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💡</div>
+                    <h3>Tu idea</h3>
+                    <p>Lo que imagines, lo desarrollamos</p>
+                </div>
+            </div>
         </section>
 
-        <section id="mensajes-apoyo" class="section">
-            <h2>Muro de Apoyo</h2>
-            <p class="section-description">Comparte un mensaje de esperanza o ánimo para la comunidad</p>
+        <!-- Demo interactivo -->
+        <section id="demo" class="section">
+            <h2>Prueba la plataforma ahora</h2>
+            <p class="section-description">Este es solo un ejemplo de lo que podemos hacer. Pruébalo:</p>
 
-            <div class="form-card">
-                <textarea id="mensaje-texto" placeholder="Escribe tu mensaje de apoyo aquí..." rows="4"></textarea>
-                <input type="text" id="mensaje-nombre" placeholder="Tu nombre (opcional)" />
-                <button onclick="publicarMensaje()" class="btn-primary">Publicar Mensaje</button>
+            <div class="demo-tabs">
+                <button class="demo-tab-btn active" onclick="cambiarDemo('mensaje')">Muro Comunitario</button>
+                <button class="demo-tab-btn" onclick="cambiarDemo('encuesta')">Encuestas</button>
+                <button class="demo-tab-btn" onclick="cambiarDemo('whatsapp')">WhatsApp</button>
             </div>
 
-            <div id="lista-mensajes" class="mensajes-container">
-                <!-- Los mensajes aparecerán aquí -->
+            <!-- Demo: Muro de mensajes -->
+            <div id="demo-mensaje" class="demo-content active">
+                <div class="form-card">
+                    <textarea id="demo-texto" placeholder="Escribe un mensaje de prueba..." rows="3"></textarea>
+                    <button onclick="publicarDemo()" class="btn-primary">Publicar (Demo)</button>
+                </div>
+                <div id="demo-lista" class="mensajes-container"></div>
+            </div>
+
+            <!-- Demo: Encuesta -->
+            <div id="demo-encuesta" class="demo-content">
+                <div class="form-card">
+                    <h3>¿Qué tipo de ayuda necesitas más?</h3>
+                    <div class="poll-options">
+                        <button onclick="votarEncuesta('trabajo')" class="poll-btn">
+                            <span>💼 Oportunidades de trabajo</span>
+                            <span class="poll-votes" id="votos-trabajo">0 votos</span>
+                        </button>
+                        <button onclick="votarEncuesta('vivienda')" class="poll-btn">
+                            <span>🏠 Vivienda temporal</span>
+                            <span class="poll-votes" id="votos-vivienda">0 votos</span>
+                        </button>
+                        <button onclick="votarEncuesta('documentos')" class="poll-btn">
+                            <span>📄 Ayuda con documentos</span>
+                            <span class="poll-votes" id="votos-documentos">0 votos</span>
+                        </button>
+                        <button onclick="votarEncuesta('informacion')" class="poll-btn">
+                            <span>📰 Información verificada</span>
+                            <span class="poll-votes" id="votos-informacion">0 votos</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Demo: WhatsApp -->
+            <div id="demo-whatsapp" class="demo-content">
+                <div class="whatsapp-demo">
+                    <div class="whatsapp-icon">📱</div>
+                    <h3>Integración con WhatsApp</h3>
+                    <p>Podemos conectar la plataforma con WhatsApp para:</p>
+                    <ul class="whatsapp-features">
+                        <li>✅ Enviar notificaciones automáticas</li>
+                        <li>✅ Crear grupos según ubicación o necesidad</li>
+                        <li>✅ Bot de respuestas automáticas 24/7</li>
+                        <li>✅ Verificación de usuarios</li>
+                        <li>✅ Alertas de emergencia</li>
+                        <li>✅ Compartir recursos y oportunidades</li>
+                    </ul>
+                    <button onclick="simularWhatsApp()" class="btn-whatsapp">
+                        <span>💬 Simular notificación WhatsApp</span>
+                    </button>
+                </div>
             </div>
         </section>
 
-        <section id="ayuda" class="section">
-            <h2>Ofrecer o Buscar Ayuda</h2>
+        <!-- Formulario de Ideas -->
+        <section id="ideas" class="section cta-section">
+            <h2>¿Qué funcionalidad necesitas?</h2>
+            <p class="section-description">Cuéntanos qué te gustaría que desarrollemos. Puede ser <strong>cualquier cosa</strong> relacionada con web, apps móviles, WhatsApp, bases de datos, etc.</p>
 
-            <div class="tabs">
-                <button class="tab-btn active" onclick="cambiarTab('ofrecer')">Ofrecer Ayuda</button>
-                <button class="tab-btn" onclick="cambiarTab('buscar')">Buscar Ayuda</button>
-            </div>
+            <div class="form-card idea-form">
+                <input type="text" id="idea-nombre" placeholder="Tu nombre (opcional)" />
+                <input type="text" id="idea-contacto" placeholder="WhatsApp o email (opcional)" />
 
-            <div id="ofrecer-tab" class="tab-content active">
-                <p class="section-description">¿Puedes ayudar a alguien? Publica lo que puedes ofrecer</p>
-                <div class="form-card">
-                    <select id="ayuda-tipo-ofrecer">
-                        <option value="">Selecciona el tipo de ayuda</option>
-                        <option value="alojamiento">Alojamiento temporal</option>
-                        <option value="trabajo">Oportunidad de trabajo</option>
-                        <option value="alimentos">Alimentos / Donaciones</option>
-                        <option value="transporte">Transporte</option>
-                        <option value="documentos">Ayuda con documentos</option>
-                        <option value="otro">Otro</option>
-                    </select>
-                    <textarea id="ayuda-descripcion-ofrecer" placeholder="Describe qué puedes ofrecer..." rows="3"></textarea>
-                    <input type="text" id="ayuda-ubicacion-ofrecer" placeholder="Ciudad/País" />
-                    <input type="text" id="ayuda-contacto-ofrecer" placeholder="Forma de contacto (email, teléfono, etc.)" />
-                    <button onclick="publicarAyuda('ofrecer')" class="btn-primary">Publicar Oferta</button>
+                <select id="idea-categoria">
+                    <option value="">¿Qué tipo de funcionalidad te interesa?</option>
+                    <option value="whatsapp">Integración con WhatsApp</option>
+                    <option value="comunidad">Comunidad y redes sociales</option>
+                    <option value="informacion">Portal de información y noticias</option>
+                    <option value="ayuda">Sistema de ayuda mutua</option>
+                    <option value="recursos">Directorio de recursos</option>
+                    <option value="herramientas">Herramientas y calculadoras</option>
+                    <option value="educacion">Educación y capacitación</option>
+                    <option value="trabajo">Bolsa de trabajo</option>
+                    <option value="otro">Otra cosa</option>
+                </select>
+
+                <textarea id="idea-descripcion" placeholder="Describe tu idea con el mayor detalle posible. Ejemplo: 'Me gustaría un bot de WhatsApp que me avise cuando haya nuevas ofertas de trabajo en mi ciudad' o 'Necesito un mapa interactivo de recursos humanitarios'..." rows="5"></textarea>
+
+                <div class="urgencia-selector">
+                    <label>¿Qué tan urgente es?</label>
+                    <div class="urgencia-buttons">
+                        <button type="button" class="urgencia-btn" data-urgencia="baja" onclick="seleccionarUrgencia('baja')">Baja</button>
+                        <button type="button" class="urgencia-btn" data-urgencia="media" onclick="seleccionarUrgencia('media')">Media</button>
+                        <button type="button" class="urgencia-btn urgencia-selected" data-urgencia="alta" onclick="seleccionarUrgencia('alta')">Alta</button>
+                    </div>
                 </div>
-                <div id="lista-ofertas" class="ayuda-container"></div>
-            </div>
 
-            <div id="buscar-tab" class="tab-content">
-                <p class="section-description">¿Necesitas ayuda? Publica tu solicitud</p>
-                <div class="form-card">
-                    <select id="ayuda-tipo-buscar">
-                        <option value="">Selecciona el tipo de ayuda</option>
-                        <option value="alojamiento">Alojamiento temporal</option>
-                        <option value="trabajo">Busco trabajo</option>
-                        <option value="alimentos">Alimentos / Donaciones</option>
-                        <option value="transporte">Transporte</option>
-                        <option value="documentos">Ayuda con documentos</option>
-                        <option value="otro">Otro</option>
-                    </select>
-                    <textarea id="ayuda-descripcion-buscar" placeholder="Describe qué necesitas..." rows="3"></textarea>
-                    <input type="text" id="ayuda-ubicacion-buscar" placeholder="Ciudad/País" />
-                    <input type="text" id="ayuda-contacto-buscar" placeholder="Forma de contacto (email, teléfono, etc.)" />
-                    <button onclick="publicarAyuda('buscar')" class="btn-primary">Publicar Solicitud</button>
-                </div>
-                <div id="lista-solicitudes" class="ayuda-container"></div>
+                <button onclick="enviarIdea()" class="btn-primary btn-large">Enviar mi idea</button>
+
+                <p class="form-note">Tu idea será guardada y revisada. Si dejas tu contacto, te escribiremos para darte más detalles.</p>
             </div>
+        </section>
+
+        <!-- Ideas enviadas -->
+        <section id="ideas-lista" class="section">
+            <h2>Ideas de la comunidad</h2>
+            <p class="section-description">Esto es lo que otros están pidiendo. Dale like a las que te interesen:</p>
+            <div id="lista-ideas" class="ideas-container"></div>
         </section>
     </main>
 
     <footer>
         <div class="container">
-            <p>Apoyo Venezuela - Hecho con ❤️ para la comunidad venezolana</p>
-            <p class="footer-note">Nota: Esta es una plataforma comunitaria. Por favor, ten precaución al compartir información personal.</p>
+            <p><strong>VZLA.dev</strong> - Plataforma web al servicio de Venezuela</p>
+            <p class="footer-note">Esta plataforma puede convertirse en lo que la comunidad necesite. Tu opinión cuenta.</p>
         </div>
     </footer>
+
+    <!-- Toast notification container -->
+    <div id="toast-container"></div>
 
     <script src="script.js"></script>
 </body>
